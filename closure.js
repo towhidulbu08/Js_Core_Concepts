@@ -1,8 +1,10 @@
 function outer() {
-  console.log("output");
-  return function inner() {
-    console.log("inner");
-  };
+  function inner() {
+    if (y > 1) {
+      console.log(y);
+    } else {
+      console.log(y * 2);
+    }
+  }
+  inner(3);
 }
-
-const x = outer();
